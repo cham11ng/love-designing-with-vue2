@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>cham11ng | vue & bulma with way</title>
+	<link rel="stylesheet" type="text/css" href="css/bulma.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<section class="section column is-offset-2 is-8">
+	<div class="container">
+		<div class="contain" id="app">
+			<div class="columns is-gapless">
+				<input class="input" v-model="newName" placeholder="Enter name" @keyup="typing = true" @keyup.enter="typing = false" />
+				<button @click="addName" :title="buttonInfo" :class="buttonClasses">Add</button>
+			</div>
+			<label v-show="newName">You are typing: <em> {{ newName }} </em></label><br />
+
+			<span :increment="totalUsers" class="tag is-primary is-medium mt1">Total Users: {{ userCount }}</span>
+
+			<table class="table">
+				<thead>
+					<tr>
+						<th>SN</th>
+						<th>Name</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr v-for="user in users">
+						<td>{{ user.id }}</td>
+						<td>{{ user.name }}</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div><!-- content -->
+	</div><!-- container -->
+</section><!-- section -->
+
+<footer class="footer">
+	<div class="container">
+		<div class="content has-text-centered">
+			<p>
+				<strong>Javascript</strong> by <a href="http://jgthms.com">cham11ng</a>. The source code is licensed
+				<a href="http://opensource.org/licenses/mit-license.php">Myself</a>
+			</p>
+		</div>
+	</div>
+</footer>
+
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

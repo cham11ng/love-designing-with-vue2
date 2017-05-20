@@ -1,0 +1,48 @@
+body {
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.active {
+	background: #eee;
+}
+
+.border {
+	border: 1px solid;
+	padding: 0 5px;
+}
+.completed {
+	text-decoration: line-through;
+}
+
+.pt5 {
+	padding-top: 1em;
+}
+
+.mt1 {
+	margin-top: 1em;
+}
+
+.fade-transition, .fading-transition, .fliping-transition {
+	background-color: #1ae080;
+	color: #fff;
+	padding: 5px;
+	margin: 1em 0;
+}
+
+.fade-transition {
+	transition: all .7s ease;
+}
+
+.fade-enter {
+	opacity: 0;
+}
+
+.fade-leave {
+	height: 100px;
+	opacity: 0;
+}
